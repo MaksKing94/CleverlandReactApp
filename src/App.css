@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
-
+.App .logo {
+  text-decoration: none;
+}
 .App .main-title {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
@@ -8,6 +10,34 @@
   color: #6E76F1;	  
 }	
 
+.App .nav-block {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.App .nav-block a {
+  text-decoration: none;
+  margin: 20px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #6E76F1;
+}
+
+.App .nav-block .active {
+  text-decoration: underline;
+}
+
+.App .nav-block a:hover, a:active {
+  color: red;
+}
+
+.App .description {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
 .input-wrap {
   padding: 0 50px;
   }
@@ -15,6 +45,9 @@
 .ProductList {
   width: 700px;
   margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 63px -1px rgba(0,0,0,0.1);
 }	
 
 
