@@ -1,0 +1,29 @@
+.Weather {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 100px;
+  }
+  
+  .Weather .current-weather {
+    padding-top: 30px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  
+  .Weather .current-weather .MuiFormControl-root {
+    width: 300px;
+  }
+  
+  .Weather .current-weather .city-wether {
+    margin: 20px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+    box-shadow: 0px 0px 63px -1px rgba(0,0,0,0.1);
+  }
+  
+  .Weather .cities-list .active {
+    color: red;
+  }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CheckboxList(props) {
   const classes = useStyles();
+
   return (
     <List className={classes.root}>
       
@@ -27,6 +28,8 @@ export default function CheckboxList(props) {
           <ListItem key={item.key} >
             <ListItemIcon>
               <Checkbox
+                checked={item.checked}
+                onChange={(event) => props.onCheck(event, item.key)}
                 edge="start"
               />
             </ListItemIcon>
@@ -34,6 +37,7 @@ export default function CheckboxList(props) {
             <ListItemSecondaryAction>
               <IconButton onClick={() => props.deleteItem(item.key)} edge="end" aria-label="comments">
                 <DeleteIcon />
+                <div>{item.checked === true && "Куплено!"}</div>
               </IconButton>
             </ListItemSecondaryAction>
           </ListItem>
@@ -42,3 +46,5 @@ export default function CheckboxList(props) {
     </List>
   );
 }
+
+export default CheckboxList;
